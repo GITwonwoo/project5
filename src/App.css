@@ -24,7 +24,14 @@
 .sliderText{position: absolute; z-index: 1; font-family: "Alfa Slab One", serif; font-size: 600%; margin: 10% 0 0 20%;  text-align: left; line-height: 50%;
 }
 .sliderText p:nth-of-type(2){color: gold;}
-.sliderText p:nth-of-type(3){color:rgb(235, 122, 122);}
+.sliderText p:nth-of-type(3)
+{
+  color:rgb(235, 122, 122);
+   text-shadow:
+   6px 3px  rgb(80, 9, 9), 
+    1px 0px  rgb(80, 9, 9);
+  }
+
 .main{
   height: 3000px;
 }
@@ -46,8 +53,15 @@
 }
 .section1 h4{font-family: "Alfa Slab One", serif;}  
 .section1 p{font-family: "Lato", sans-serif, serif;}
+
 span{color: gold; font-weight: bold;}
 
+.box{margin-bottom: 10%;}
+.thumb{height: auto; overflow: hidden;}
+.box img:hover {transform: scale(1.2, 1.2); transition-duration: 0.5s;}
+.box img {transition-duration: 0.3s;}
+.box .img-wrap:hover{background-color: orange;}
+.textbox{height: 100px;}
 
 
 /* section2 */
@@ -60,11 +74,33 @@ span{color: gold; font-weight: bold;}
   background-image: url(../public/img/middlebanner.webp);
 }
 .bannertext{
+  font-size: 25px;
+  margin: 0 auto;
+  padding-top: 8%;
+  width: 40%;
   text-align: center;
   color: white;
   font-family: "Libre Baskerville", serif;
 }
+.section2 button{
+  background-color: gold;
+  padding: 1%;
+}
+.section2 button:hover{
+ color: gold;
+ background: transparent;
+ border: 1px solid gold;
+}
 
 
 /* footer */
-.footer{background-color: blue;}
+.footer{height: 500px;
+  background-color: blue; display: flex;
+  justify-content: center; 
+}
+.footerone{background-color: red;}
+
+.footertwo{background-color: aqua;}
+.ContactUs{display: flex;}
+
+.footerthree{background-color: white;}

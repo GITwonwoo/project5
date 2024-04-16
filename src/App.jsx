@@ -32,8 +32,36 @@ function App() {
 
       <Home foods={foods}></Home>
  
-    
-      <p className='footer'>COPYRIGHT(C) 2024 Nike, Inc. All Rights Reserved</p>
+      <div className='footer'>
+            <div className='footerone'>
+              <p>food fun</p>
+              <p>Which morning four</p>
+            </div>
+
+            <div className='footertwo'>
+              <p>Contact Us</p>
+              <div className='ContactUs'>
+                  <img src="1" alt="1" />
+                  <p>1</p>
+              </div>
+              <div className='ContactUs'>
+                  <img src="2" alt="2" />
+                  <p>2</p>
+              </div>
+              <div className='ContactUs'>
+                  <img src="3" alt="3" />
+                  <p>3</p> 
+              </div>
+            </div>
+
+            <div className='footerthree'>
+            <p>Contact Us</p>
+              <h6>1</h6>
+              <h6>2</h6>
+              <h6>3</h6>
+            </div>
+      </div>
+  
    
     </div>
   );

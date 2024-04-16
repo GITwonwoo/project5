@@ -54,15 +54,23 @@ const Home = (props) => {
 
                         <Row>
 
-                            {
-                                foods.map((food, i) =>
-                                    <Col lg={4} sm={6}>
-                                        <img src={food.imgUrl} alt="" width="100%" />
-                                        <h4>{food.title} <span>{food.price}$</span></h4>
-                                        <p>{food.content}</p>
-                                    </Col>
-                                )
-                            }
+                     {
+                        foods.map((food, i) =>
+                         <Col lg={4} sm={6}>
+                             <div className='box'>
+                                 <div className='img-wrap'>
+                                     <div className='thumb'>
+                                         <img src={food.imgUrl} alt="" width="100%" />
+                                     </div>
+                                     <div className='textbox'>
+                                         <h4>{food.title} <span>{food.price}$</span></h4>
+                                         <p>{food.content}</p>
+                                     </div>
+                                 </div>
+                             </div>
+                        </Col>
+                         )
+                     }
 
                         </Row>
 
@@ -72,8 +80,9 @@ const Home = (props) => {
                 <div className='section2'>
                     <div className='middlebanner'>
                         <div className='bannertext'>
-                            Natural ingredients and testy food
-                            Some Trendy And Popular Courses Offerd
+                            <p>Natural ingredients and testy food</p>
+                            <p>Some Trendy And Popular Courses Offerd
+                            </p>
                         </div>
                         <button>RESERVATION</button>
                     </div>
