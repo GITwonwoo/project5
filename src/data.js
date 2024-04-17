@@ -21,7 +21,7 @@ let data = [
       title: "Sirloin steak",
       imgUrl: "/img/sirloin_3.jpg",
       content: "Born in the States",
-      price: 130.000
+      price: 1.000
     },
 
     {

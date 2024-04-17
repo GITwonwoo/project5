@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 
+
+
+
 .App {
   text-align: center;
   background-color:white;
@@ -12,16 +15,18 @@
 }
 .navbar .container{
   padding: 5px;
-  background-color: rgb(235, 122, 122);
+  /* background-color: rgb(235, 122, 122); */
   border-radius: 10px;
   border: 5px solid rgb(80, 9, 9);
   font-size: 20PX;
   color: white;
+  backdrop-filter: blur(15px);
 }
-.me-auto a{ color: white;}
+.me-auto a{ color: rgb(235, 122, 122); font-weight: bold;}
+.logintext a{color: black;}
 .slider{position: relative; }
 .slider h4{ font-family: "Lato", sans-serif, serif; color: white; -webkit-text-stroke: 1px black;}
-.sliderText{position: absolute; z-index: 1; font-family: "Alfa Slab One", serif; font-size: 600%; margin: 10% 0 0 20%;  text-align: left; line-height: 50%;
+.sliderText{position: absolute; z-index: 1; font-family: "Alfa Slab One", serif; font-size: 7vw; margin-top: 20vw;  text-align: left; line-height: 50%;
 }
 .sliderText p:nth-of-type(2){color: gold;}
 .sliderText p:nth-of-type(3)
@@ -32,9 +37,9 @@
     1px 0px  rgb(80, 9, 9);
   }
 
-.main{
+/* .main{
   height: 3000px;
-}
+} */
 
 
 
@@ -46,32 +51,34 @@
 }
 .section1{
   margin: 0 auto;
-  background-image: url(../public/img/bg_garlic.jpg), url(../public/img/bg_pmang.jpg);
+  background-image: url(../public/img/bg_garlic.jpg) ;
   background-repeat: no-repeat; 
   background-position: top right, bottom left;
-  padding-top: 50px;
+  padding: 100px 0;
+
 }
 .section1 h4{font-family: "Alfa Slab One", serif;}  
 .section1 p{font-family: "Lato", sans-serif, serif;}
 
-span{color: gold; font-weight: bold;}
+span{color: gold; }
 
 .box{margin-bottom: 10%;}
 .thumb{height: auto; overflow: hidden;}
-.box img:hover {transform: scale(1.2, 1.2); transition-duration: 0.5s;}
+.box .img-wrap:hover img{transform: scale(1.2, 1.2); transition-duration: 0.5s;}
 .box img {transition-duration: 0.3s;}
-.box .img-wrap:hover{background-color: orange;}
-.textbox{height: 100px;}
+.box .img-wrap:hover{background-color: rgb(235, 122, 122);}
+.textbox{height: 150px; padding: 20px ;}
 
 
 /* section2 */
 .section2{
-  margin: 150px auto;
+  margin: 0 auto;
 }
 .middlebanner{
   height: 450px;
   width: 100%;
   background-image: url(../public/img/middlebanner.webp);
+  margin-bottom: 50px;
 }
 .bannertext{
   font-size: 25px;
@@ -91,16 +98,42 @@ span{color: gold; font-weight: bold;}
  background: transparent;
  border: 1px solid gold;
 }
+.section2title{
+  font-family: "Alfa Slab One", serif; font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.section2 .container{
+  padding-bottom: 50px;
+}
+
+.swiper img{width: 100%;}
+.swipertext{background-color: red; width: 100%; height: 300px;}
+
 
 
 /* footer */
-.footer{height: 500px;
-  background-color: blue; display: flex;
-  justify-content: center; 
+.footer{
+  background-color: blue;
+  padding: 100px 0;
 }
-.footerone{background-color: red;}
 
-.footertwo{background-color: aqua;}
+.footer h3{font-family: "Libre Baskerville", serif;
+margin-top: 10%;}
+
+.Part h3 img{width: 20%; }
+
+/* .ContactUs */
 .ContactUs{display: flex;}
+.ContactUs img{width: 60px; }
 
-.footerthree{background-color: white;}
+
+
+
+@media(max-width:992px) {
+.footer .part{text-align: left;}
+}
+@media(max-width:1050px) {
+.slider{}  
+}
+  

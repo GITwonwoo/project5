@@ -1,7 +1,7 @@
 import './App.css';
 import data from './data.js';
-import {useState} from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { useState } from 'react';
+import { Container, Navbar, Nav, Row,Col } from 'react-bootstrap';
 import Home from './components/Home.jsx';
 
 
@@ -21,7 +21,7 @@ function App() {
               <Nav.Link>Features</Nav.Link>
               <Nav.Link>Pricing</Nav.Link>
             </Nav>
-            <Nav>
+            <Nav className='logintext'>
               <Nav.Link>LOGIN</Nav.Link>
               <Nav.Link>Cart</Nav.Link>
             </Nav>
@@ -31,38 +31,47 @@ function App() {
       </Navbar>
 
       <Home foods={foods}></Home>
- 
+
       <div className='footer'>
-            <div className='footerone'>
-              <p>food fun</p>
-              <p>Which morning four</p>
-            </div>
+        <Container>
+          <Row>
+            <Col lg={4} className='part'>
+              <h3><img src="/img/meatlogo_small.png" alt="1" />The Meat Club</h3>
+              <p>Which morning fourth great won't is to fly bearing man. Called unto shall seed, deep, herb set seed land divide after over first creeping. First creature set upon stars deep male gathered said she'd an image spirit our</p>
+            </Col>
 
-            <div className='footertwo'>
-              <p>Contact Us</p>
+            <Col lg={4} className='part'>
+              <h3>Contact Us</h3>
               <div className='ContactUs'>
-                  <img src="1" alt="1" />
-                  <p>1</p>
+                <img src="/img/instagram.png" alt="1" />
+                <p>1234 Some St San Francisco, CA 94102, US 1.800.123.4567</p>
               </div>
               <div className='ContactUs'>
-                  <img src="2" alt="2" />
-                  <p>2</p>
+                <img src="/img/youtube.png" alt="2" />
+                <p>(123) 456 78 90</p>
               </div>
               <div className='ContactUs'>
-                  <img src="3" alt="3" />
-                  <p>3</p> 
+                <img src="/img/naverblog.png" alt="3" />
+                <p>support@axiomthemes.com</p>
               </div>
-            </div>
+            </Col>
 
-            <div className='footerthree'>
-            <p>Contact Us</p>
-              <h6>1</h6>
-              <h6>2</h6>
-              <h6>3</h6>
-            </div>
+            <Col lg={4} className='part'>
+
+              <h3>Opening Hours</h3>
+              <h6>Monday ...................... Closed</h6>
+              <h6>Tue-Fri .............. 10 am - 12 pm</h6>
+              <h6>Sat-Sun ............... 8 am - 11 pm</h6>
+              <h6>Holidays ............. 10 am - 12 pm</h6>
+
+            </Col>
+
+          </Row>
+
+        </Container>
       </div>
-  
-   
+
+
     </div>
   );
 }
