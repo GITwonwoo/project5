@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Navbar collapseOnSelect expand="lg" className="bg-body-transparent">
         <Container>
-          <Navbar.Brand><img src="/img/meatlogo.png" alt="" width='20%' />MeatClub</Navbar.Brand>
+          <Navbar.Brand><img src="/img/meatlogo.png" alt="0" width='20%' />MeatClub</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -57,13 +57,13 @@ function App() {
             </Col>
 
             <Col lg={4} className='part'>
-
+            <div className='partcontents'>
               <h3>Opening Hours</h3>
               <h6>Monday ...................... Closed</h6>
               <h6>Tue-Fri .............. 10 am - 12 pm</h6>
               <h6>Sat-Sun ............... 8 am - 11 pm</h6>
               <h6>Holidays ............. 10 am - 12 pm</h6>
-
+            </div>
             </Col>
 
           </Row>

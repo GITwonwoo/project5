@@ -79,7 +79,7 @@ const Home = (props) => {
                         </div>
                         <button>RESERVATION</button>
                     </div>
-                    <div className='section2title'><h4>our special menu</h4></div>
+                    <div className='section2title'><h4>our special menu <h2>Comming Soon</h2></h4></div>
                     <Container>
                         <div className='swiper'>
                             <Swiper
@@ -102,12 +102,15 @@ const Home = (props) => {
                                 modules={[Pagination]}
                                 className="mySwiper"
                             >
-                                <SwiperSlide><img src="img/tborn_1.jpg" alt="" /><div className='swipertext'>sadasfasfdasgasdfsad</div></SwiperSlide>
-                                <SwiperSlide><img src="img/tborn_1.jpg" alt="" /><div className='swipertext'></div></SwiperSlide>
-                                <SwiperSlide><img src="img/tborn_1.jpg" alt="" /><div className='swipertext'></div></SwiperSlide>
-                                <SwiperSlide>Slide 4</SwiperSlide>
-                                <SwiperSlide>Slide 5</SwiperSlide>
-                                <SwiperSlide>Slide </SwiperSlide>
+                                <SwiperSlide><img src="img/food1.webp" alt="" /><div className='swipertext'><i style={{fontSize:'30px', color:'red'}} class="fa-regular fa-user"></i >sadasfasfdasgasdfsad</div></SwiperSlide>
+
+                                <SwiperSlide><img src="img/food2.jpg" alt="" /><div className='swipertext'><i style={{fontSize:'30px', color:'red'}} class="fa-regular fa-user"></i >sadasfasfdasgasdfsad</div></SwiperSlide>
+
+                                <SwiperSlide><img src="img/food3.webp" alt="" /><div className='swipertext'><i style={{fontSize:'30px', color:'red'}} class="fa-regular fa-user"></i >sadasfasfdasgasdfsad</div></SwiperSlide>
+
+                                <SwiperSlide><img src="img/food4.webp" alt="" /><div className='swipertext'><i style={{fontSize:'30px', color:'red'}} class="fa-regular fa-user"></i >sadasfasfdasgasdfsad</div></SwiperSlide>
+                                
+                             
                  
                  
                             </Swiper>
