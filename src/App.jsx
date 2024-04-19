@@ -2,7 +2,9 @@ import './App.css';
 import data from './data.js';
 import { useState } from 'react';
 import { Container, Navbar, Nav, Row,Col } from 'react-bootstrap';
-import Home from './components/Home.jsx';
+import Home from './routes/Home.jsx';
+import {Routes, Route, Link } from 'react-router-dom';
+import Detail from './routes/Detail.jsx';
 
 
 function App() {
@@ -12,7 +14,11 @@ function App() {
     <div className="App">
       <Navbar collapseOnSelect expand="lg" className="bg-body-transparent">
         <Container>
-          <Navbar.Brand><img src="/img/meatlogo.png" alt="0" width='20%' />MeatClub</Navbar.Brand>
+          <Navbar.Brand>
+            <img src="/img/meatlogo.png" alt="0" width='15%'/>
+            <span className='black'>Meat</span>
+            <span className='pink'>Club</span>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -30,7 +36,14 @@ function App() {
         </Container>
       </Navbar>
 
-      <Home foods={foods}></Home>
+      <Routes>
+          <Route path="/" element={<Home foods={foods}></Home>} />
+          <Route path="/detail" element={<Detail></Detail>} />
+      </Routes>
+
+
+
+      
 
       <div className='footer'>
         <Container>
