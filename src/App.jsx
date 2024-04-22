@@ -3,18 +3,19 @@ import data from './data.js';
 import { useState } from 'react';
 import { Container, Navbar, Nav, Row,Col } from 'react-bootstrap';
 import Home from './routes/Home.jsx';
-import {Routes, Route, Link } from 'react-router-dom';
+import {Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Detail from './routes/Detail.jsx';
 
 
 function App() {
+  const navigate = useNavigate()
   const [foods, setFoods] = useState(data);
 
   return (
     <div className="App">
       <Navbar collapseOnSelect expand="lg" className="bg-body-transparent">
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand onClick={()=>{navigate('/')}}>
             <img src="/img/meatlogo.png" alt="0" width='15%'/>
             <span className='black'>Meat</span>
             <span className='pink'>Club</span>
@@ -22,9 +23,9 @@ function App() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>HOME</Nav.Link>
-              <Nav.Link>MENU</Nav.Link>
-              <Nav.Link>Features</Nav.Link>
+              <Nav.Link onClick={()=>{navigate('/')}}>HOME</Nav.Link>
+              <Nav.Link onClick={()=>{navigate('/detail')}}>MENU</Nav.Link>
+              <Nav.Link onClick={()=>{navigate('/cart')}}>CART</Nav.Link>
               <Nav.Link>Pricing</Nav.Link>
             </Nav>
             <Nav className='logintext'>
@@ -38,7 +39,7 @@ function App() {
 
       <Routes>
           <Route path="/" element={<Home foods={foods}></Home>} />
-          <Route path="/detail" element={<Detail></Detail>} />
+          <Route path="/detail" element={<Detail foods={foods}></Detail>} />
       </Routes>
 
 

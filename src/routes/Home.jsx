@@ -4,11 +4,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 // import Product from './Product.jsx';
 // interval={null}
-const Home = (props) => {
-
+    const Home = (props) => {
+    const navigate = useNavigate()
     const { foods } = props
 
     return (
@@ -49,11 +50,11 @@ const Home = (props) => {
 
                             {
                                 foods.map((food, i) =>
-                                    <Col lg={4} sm={6}>
-                                        <div className='box'>
+                                    <Col lg={4} sm={6} >
+                                        <div className='box' onClick={()=>{navigate('/detail')}}>
                                             <div className='img-wrap'>
                                                 <div className='thumb'>
-                                                    <img src={food.imgUrl} alt="" width="100%" />
+                                                    <img src={food.imgUrl} alt="food" width="100%"/>
                                                 </div>
                                                 <div className='textbox'>
                                                     <h4>{food.title} <span>{food.price} $</span></h4>

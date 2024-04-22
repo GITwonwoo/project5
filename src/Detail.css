@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Detail section1 */
+.detailwrap{
+    padding-top: 200px;
+}
+.ProductInfor h4{ 
+    font-family: "Alfa Slab One", serif;
+}
+.ProductInfor h6{ width: 50%; margin: 5% auto;
+    font-family: "Libre Baskerville", serif;
+    line-height: 30px;
+}
+.ProductText{position: relative;}
+.signature{position: absolute; width: 20%; margin: -8% -50%;}
+table{margin: 0 auto;}
+
+/* Detail section2 */

@@ -5,23 +5,41 @@ let data = [
       title: "Tborn steak",
       imgUrl: "/img/tborn_1.jpg",
       content: "T-bone steak allows you to taste sirloin and tenderloin at the same time.",
-      price: 10.50
+      price: 10.50,
+      weight: "250g",
+      fat: "15g",
+      protien: "40g",
+      carbohydrate: "30g",
+      sodium: "395.3mg",
+      calorie: "380kacl"
     },
     
     {
       id: 1,
-      title: "Topblade steak",
+      title: "Topblade cream steak",
       imgUrl: "/img/topblade_2.jpg",
-      content: "The fan meat is best eaten medium and served with french fries.",
-      price: 9.50
+      content: "making it a new match with homemade potato cream soup.",
+      price: 9.50,
+      weight: "300g",
+      fat: "15g",
+      protien: "59g",
+      carbohydrate: "21g",
+      sodium: "195.3mg",
+      calorie: "420kacl"
     },
     
     {
       id: 2,
       title: "Sirloin steak",
       imgUrl: "/img/sirloin_3.jpg",
-      content: "Sirloin has very luxurious marbling and the fat provides a nutty and rich flavor.",
-      price: 15.50
+      content: "Sirloin has very luxurious marbling and the fat provides a nutty and rich flavor and served with french fries.",
+      price: 15.50,
+      weight: "250g",
+      fat: "20g",
+      protien: "50g",
+      carbohydrate: "30g",
+      sodium: "175.3mg",
+      calorie: "420kacl"
     },
 
     {
@@ -29,7 +47,13 @@ let data = [
       title : "Tomahawk Steak",
       imgUrl: "/img/tomahawk_4.jpg",
       content : "Tomahawk is a premium cut that allows you to eat 3 parts at the same time. You can eat sirloin, shrimp, and ribs.",
-      price : 15.00
+      price : 15.00,
+      weight: "650g",
+      fat: "15g",
+      protien: "50g",
+      carbohydrate: "30g",
+      sodium: "223.3mg",
+      calorie: "520kacl"
     },
     
     {
@@ -37,7 +61,13 @@ let data = [
       title : "Ribeye steak",
       imgUrl: "/img/ribeye_5.jpg",
       content : "Ribeye steak is meat attached to the bone, so it has a rich flavor and is chewy.",
-      price : 20.00
+      price : 20.00,
+      weight: "280g",
+      fat: "15g",
+      protien: "50g",
+      carbohydrate: "23g",
+      sodium: "195.3mg",
+      calorie: "503kacl"
     },
     
     {
@@ -45,7 +75,13 @@ let data = [
       title : "Tenderloin steak",
       imgUrl: "/img/tenderloin_6.jpg",
       content : "Tenderloin steak is thick but very tender and is the ultimate in tender beef.",
-      price : 17.00  
+      price : 17.00 ,
+      weight: "200g",
+      fat: "13g",
+      protien: "20g",
+      carbohydrate: "30g",
+      sodium: "120.3mg",
+      calorie: "450kacl" 
     },
     
  
