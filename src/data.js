@@ -7,25 +7,29 @@ let data = [
       content: "T-bone steak allows you to taste sirloin and tenderloin at the same time.",
       price: 10.50,
       weight: "250g",
-      fat: "15g",
-      protien: "40g",
+      fat:"15g",
+      protein: "40g",
       carbohydrate: "30g",
       sodium: "395.3mg",
-      calorie: "380kacl"
+      calorie: "380kacl",
     },
     
     {
       id: 1,
       title: "Topblade cream steak",
       imgUrl: "/img/topblade_2.jpg",
-      content: "making it a new match with homemade potato cream soup.",
+      imgUrl1:"/img/topblade_2.jpg",
+      imgUrl2:"/img/topblade_2_1.jpg",
+      imgUrl3:"/img/topblade_2_2.jpg",
+      content: "The signature menu, Topblade, is medium and has good flavor. making it a new match with homemade potato cream soup.",
       price: 9.50,
-      weight: "300g",
-      fat: "15g",
-      protien: "59g",
+      weight:"300g",
+      fat:"15g",
+      protein: "59g",
       carbohydrate: "21g",
       sodium: "195.3mg",
-      calorie: "420kacl"
+      calorie: "420kacl",
+      logo: "/img/signature.png"
     },
     
     {
@@ -36,7 +40,7 @@ let data = [
       price: 15.50,
       weight: "250g",
       fat: "20g",
-      protien: "50g",
+      protein: "50g",
       carbohydrate: "30g",
       sodium: "175.3mg",
       calorie: "420kacl"
@@ -50,7 +54,7 @@ let data = [
       price : 15.00,
       weight: "650g",
       fat: "15g",
-      protien: "50g",
+      protein: "50g",
       carbohydrate: "30g",
       sodium: "223.3mg",
       calorie: "520kacl"
@@ -64,7 +68,7 @@ let data = [
       price : 20.00,
       weight: "280g",
       fat: "15g",
-      protien: "50g",
+      protein: "50g",
       carbohydrate: "23g",
       sodium: "195.3mg",
       calorie: "503kacl"
@@ -78,7 +82,7 @@ let data = [
       price : 17.00 ,
       weight: "200g",
       fat: "13g",
-      protien: "20g",
+      protein: "20g",
       carbohydrate: "30g",
       sodium: "120.3mg",
       calorie: "450kacl" 

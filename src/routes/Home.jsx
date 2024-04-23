@@ -51,7 +51,7 @@ import { useNavigate } from 'react-router-dom';
                             {
                                 foods.map((food, i) =>
                                     <Col lg={4} sm={6} >
-                                        <div className='box' onClick={()=>{navigate('/detail')}}>
+                                        <div className='box' onClick={()=>{navigate('/detail/1')}}>
                                             <div className='img-wrap'>
                                                 <div className='thumb'>
                                                     <img src={food.imgUrl} alt="food" width="100%"/>
@@ -80,7 +80,10 @@ import { useNavigate } from 'react-router-dom';
                         </div>
                         <button>RESERVATION</button>
                     </div>
-                    <div className='section2title'><h4>our special menu <h2>Comming Soon</h2></h4></div>
+                    <div className='section2title'>
+                        <h4>our special menu</h4>
+                        <h2>Comming Soon</h2>
+                    </div>
                     <Container>
                         <div className='swiper'>
                             <Swiper

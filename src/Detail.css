@@ -2,19 +2,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Detail section1 */
+/* "Alfa Slab One", serif; */
+/* "Libre Baskerville", serif; */
+/* "Lato", sans-serif, serif; */
+
+/* This menu is the meat's signature menu, and the self-developed sauce and aged meat go well together. I recommend it. */
+.steakIMG h2,h4{
+    font-family:"Libre Baskerville", serif;  
+}
+.detailwrap h1{ 
+    font-family: "Alfa Slab One", serif;
+}
+
+/* ---Detail section1--- */
+/* Col left */
 .detailwrap{
     padding-top: 200px;
 }
-.ProductInfor h4{ 
-    font-family: "Alfa Slab One", serif;
+.signature{
+    position: absolute;
 }
+.steakIMG{
+    position: relative;
+    align-content: center;
+}
+.imgUrlBox img{ width:25%; margin: 0.8vw;   
+}
+
+
+/* Col right */
+.ProductInfor{
+    position: relative;
+} 
+.ProductInfor img{
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
 .ProductInfor h6{ width: 50%; margin: 5% auto;
     font-family: "Libre Baskerville", serif;
     line-height: 30px;
 }
-.ProductText{position: relative;}
-.signature{position: absolute; width: 20%; margin: -8% -50%;}
-table{margin: 0 auto;}
+.ProductText{
+    padding: 10vw 0;
+}
 
-/* Detail section2 */
+
+table,h5{margin: 0 auto; font-family:"Lato", sans-serif, serif; }
+.bold{font-weight: bold;}
+.Gold{font-size: 20px; color: gold; }
+h5{font-weight: bold; font-size: 20px;}
+.nutrient{
+    text-align: left;
+}
+
+
+/* ---Detail section2--- */

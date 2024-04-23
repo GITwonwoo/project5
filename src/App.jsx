@@ -24,7 +24,7 @@ function App() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link onClick={()=>{navigate('/')}}>HOME</Nav.Link>
-              <Nav.Link onClick={()=>{navigate('/detail')}}>MENU</Nav.Link>
+              <Nav.Link onClick={()=>{navigate('/detail/1')}}>MENU</Nav.Link>
               <Nav.Link onClick={()=>{navigate('/cart')}}>CART</Nav.Link>
               <Nav.Link>Pricing</Nav.Link>
             </Nav>
@@ -39,7 +39,7 @@ function App() {
 
       <Routes>
           <Route path="/" element={<Home foods={foods}></Home>} />
-          <Route path="/detail" element={<Detail foods={foods}></Detail>} />
+          <Route path="/detail/:id" element={<Detail foods={foods}></Detail>} />
       </Routes>
 
 
