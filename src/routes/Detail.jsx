@@ -1,5 +1,5 @@
 import '../Detail.css'
-import {Container,Row,Col,Nav} from 'react-bootstrap';
+import {Container,Row,Col,Nav,Button, TabContent} from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -7,8 +7,12 @@ import { useState } from 'react';
 
   const Detail = (props)=>{
     let {id} = useParams();
-    let {foods}= props;
-    // console.log(foods[id].logo)
+    let {foods}= props
+    let [tab,setTab] = useState(0)
+    let navigate = useNavigate();
+
+    let [click, setClick] = useState(0); 
+    
   return (
   <Container className='detailwrap'>
     <div className='Detailsection1'>
@@ -23,15 +27,26 @@ import { useState } from 'react';
               foods[id].logo !== undefined &&
               <img className='signature' src={foods[id].logo} alt="signature" width="25%" />
             }
-            <img src={foods[id].imgUrl} alt="topblade" width="100%" />
+            {
+              (()=>{
+                if(click===0){
+                  return <img src={foods[id].imgUrl} alt="topblade" width="100%" />
+                }else if(click===1){
+                  return <img src={foods[id].imgUrl1} alt="topblade" width="100%" />
+                }else if(click===2){
+                  return <img src={foods[id].imgUrl2} alt="topblade" width="100%" />
+                }
+              })()
+            }
+            
             </div>
             
               {
-              foods[id].imgUrl1 !== undefined &&
+              foods[id].imgUrl2 !== undefined &&
                <div className='imgUrlBox'>
-                <img src={foods[id].imgUrl1} alt="imgUrl1" width="100px" />
-                <img src={foods[id].imgUrl2} alt="imgUrl2" width="100px" />
-                <img src={foods[id].imgUrl3} alt="imgUrl3" width="100px" />
+                <img src={foods[id].imgUrl} alt="imgUrl1" width="100px" onClick={()=>(setClick(0))}/>
+                <img src={foods[id].imgUrl1} alt="imgUrl2" width="100px"  onClick={()=>(setClick(1))}/>
+                <img src={foods[id].imgUrl2} alt="imgUrl3" width="100px"  onClick={()=>(setClick(2))}/>
               </div>
               }
            
@@ -87,10 +102,44 @@ import { useState } from 'react';
         </Row>
       </div>
 
-    <div className='Detailsection2'>
+      <div className='Detailsection2'>
+        <Nav variant="tabs" defaultActiveKey="link0">
 
-    </div>
-  </Container>
+          <Nav.Item>
+            <Nav.Link onClick={() => { setTab(0) }} eventKey="link0">steak</Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link onClick={() => { setTab(1) }} eventKey="link1">버튼1</Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link onClick={() => { setTab(2) }} eventKey="link2">버튼2</Nav.Link>
+          </Nav.Item>
+
+        </Nav>
+
+        {<div tab={tab}>
+          {(() => {
+            if (tab === 0) {
+              return <div>
+                <img src={foods[id].imgUrl} alt="imgUrl1" width="100px" />
+              </div>
+            } else if (tab === 1) {
+              return <div>내용1</div>
+            } else if (tab === 2) {
+              return <div>내용2</div>
+            }
+          })()
+          }
+        </div>}
+
+
+        <TabContent tab={tab} />
+
+      </div>
+
+    </Container>
   );
 }
 

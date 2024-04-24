@@ -129,10 +129,10 @@ import { useNavigate } from 'react-router-dom';
 
                                         <i class="fa-solid fa-calendar-days"></i>2024/
                                         05/15
-                                        <p>
+                                        <div>
                                             <h5>sirloin sushi</h5>
                                             <h6>Koreans are always craving rice. I made sushi by adding homemade steak to the rice.</h6>
-                                        </p>
+                                        </div>
                                     </div>
                                 </SwiperSlide>
 

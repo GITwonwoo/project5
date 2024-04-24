@@ -58,15 +58,15 @@ function App() {
               <h3>Contact Us</h3>
               <div className='ContactUs'>
                 <img src="/img/instagram.png" alt="1" />
-                <p>1234 Some St San Francisco, CA 94102, US 1.800.123.4567</p>
+                <p>themeatclub.instagram</p>
               </div>
               <div className='ContactUs'>
                 <img src="/img/youtube.png" alt="2" />
-                <p>(123) 456 78 90</p>
+                <p>https://TheMeatClub_youtube.com</p>
               </div>
               <div className='ContactUs'>
                 <img src="/img/naverblog.png" alt="3" />
-                <p>support@axiomthemes.com</p>
+                <p>support@naver.blog.com</p>
               </div>
             </Col>
 
