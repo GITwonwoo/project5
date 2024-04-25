@@ -14,11 +14,15 @@
     font-family: "Alfa Slab One", serif;
 }
 
+
 /* ---Detail section1--- */
 /* Col left */
-.detailwrap{
+.Detailsection1{
     padding-top: 200px;
 }
+/* .detailwrap{
+    padding-top: 200px;
+} */
 .signature{
     position: absolute;
 }
@@ -34,13 +38,14 @@
 .ProductInfor{
     position: relative;
 } 
-.ProductInfor img{
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
+.textbg{
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 90%; height: 90%;
+    
 }
 
 .ProductInfor h6{ width: 50%; margin: 5% auto;
-    font-family: "Libre Baskerville", serif;
+    font-family: "Libre Baskerville", serif; 
     line-height: 30px;
 }
 .ProductText{
@@ -58,3 +63,22 @@ h5{font-weight: bold; font-size: 20px;}
 
 
 /* ---Detail section2--- */
+.Detailsection2 h5{
+ font-family: "Libre Baskerville", serif;
+}
+.Detailsection2{
+    padding-top: 100px;
+}
+.tabimgs{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.textbox span{color: gold;}
+
+.swiper{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+.swiper .box .img-wrap:hover{
+    background-color: transparent;
+}

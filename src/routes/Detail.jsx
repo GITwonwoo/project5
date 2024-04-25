@@ -1,60 +1,68 @@
 import '../Detail.css'
-import {Container,Row,Col,Nav,Button, TabContent} from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { Container, Row, Col, Nav, Button, TabContent } from 'react-bootstrap';
+import { Route, Routes, useNavigate, useParams } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import data2 from '../data2';
+import Beverage from '../components/Beverage';
+
+const Detail = (props) => {
+  let { id } = useParams();
+  let { foods } = props
+  const [beverage, setBeverage] =useState(data2)
+  let [tab, setTab] = useState(0)
+  let navigate = useNavigate();
+
+  let [click, setClick] = useState(0);
 
 
-
-  const Detail = (props)=>{
-    let {id} = useParams();
-    let {foods}= props
-    let [tab,setTab] = useState(0)
-    let navigate = useNavigate();
-
-    let [click, setClick] = useState(0); 
-    
   return (
-  <Container className='detailwrap'>
-    <div className='Detailsection1'>
-         
+
+    <Container className='detailwrap'>
+
+      <div className='Detailsection1'>
+
         <Row>
           <Col md={6} className='steakIMG'>
             <h2>--our menu--</h2>
             <h1>{foods[id].title}</h1>
-           
+
             <div>
-            {
-              foods[id].logo !== undefined &&
-              <img className='signature' src={foods[id].logo} alt="signature" width="25%" />
-            }
-            {
-              (()=>{
-                if(click===0){
-                  return <img src={foods[id].imgUrl} alt="topblade" width="100%" />
-                }else if(click===1){
-                  return <img src={foods[id].imgUrl1} alt="topblade" width="100%" />
-                }else if(click===2){
-                  return <img src={foods[id].imgUrl2} alt="topblade" width="100%" />
-                }
-              })()
-            }
-            
-            </div>
-            
               {
-              foods[id].imgUrl2 !== undefined &&
-               <div className='imgUrlBox'>
-                <img src={foods[id].imgUrl} alt="imgUrl1" width="100px" onClick={()=>(setClick(0))}/>
-                <img src={foods[id].imgUrl1} alt="imgUrl2" width="100px"  onClick={()=>(setClick(1))}/>
-                <img src={foods[id].imgUrl2} alt="imgUrl3" width="100px"  onClick={()=>(setClick(2))}/>
-              </div>
+                foods[id].logo !== undefined &&
+                <img className='signature' src={foods[id].logo} alt="signature" width="25%" />
               }
-           
-            
+              {
+                (() => {
+                  if (click === 0) {
+                    return <img src={foods[id].imgUrl} alt="topblade" width="100%" />
+                  } else if (click === 1) {
+                    return <img src={foods[id].imgUrl1} alt="topblade" width="100%" />
+                  } else if (click === 2) {
+                    return <img src={foods[id].imgUrl2} alt="topblade" width="100%" />
+                  }
+                })()
+              }
+
+            </div>
+
+            {
+              foods[id].imgUrl2 !== undefined &&
+              <div className='imgUrlBox'>
+                <img src={foods[id].imgUrl} alt="imgUrl1" width="100px" onClick={() => (setClick(0))} />
+                <img src={foods[id].imgUrl1} alt="imgUrl2" width="100px" onClick={() => (setClick(1))} />
+                <img src={foods[id].imgUrl2} alt="imgUrl3" width="100px" onClick={() => (setClick(2))} />
+              </div>
+            }
+
+
           </Col>
           <Col md={6} className='ProductInfor'>
 
-            <img src="../img/textbg.png" alt="textbg" width="100%" />
+            <img className='textbg' src="../img/textbg.png" alt="textbg" width="100%" />
 
             <div className='ProductText'>
               <h4>delicious information</h4>
@@ -69,8 +77,8 @@ import { useState } from 'react';
                 </tbody>
               </table>
 
-              <br/>
-              <br/>
+              <br />
+              <br />
               <h5>nutrient</h5>
 
               <table className='nutrient'>
@@ -82,7 +90,7 @@ import { useState } from 'react';
                     <td>{foods[id].fat}</td>
                   </tr>
 
-                  <tr>  
+                  <tr>
                     <th>carbohydrate:</th>
                     <td>{foods[id].carbohydrate}</td>
                     <th>protein:</th>
@@ -100,21 +108,24 @@ import { useState } from 'react';
             </div>
           </Col>
         </Row>
+
       </div>
 
+
       <div className='Detailsection2'>
-        <Nav variant="tabs" defaultActiveKey="link0">
+        <div><h4>View other menus</h4></div>
+        <Nav className='bgcolor' variant="tabs" defaultActiveKey="link0">
 
           <Nav.Item>
-            <Nav.Link onClick={() => { setTab(0) }} eventKey="link0">steak</Nav.Link>
+            <Nav.Link onClick={() => { setTab(0) }} eventKey="link0"><h5>steak</h5></Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link onClick={() => { setTab(1) }} eventKey="link1">버튼1</Nav.Link>
+            <Nav.Link onClick={() => { setTab(1) }} eventKey="link1"><h5>side</h5></Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
-            <Nav.Link onClick={() => { setTab(2) }} eventKey="link2">버튼2</Nav.Link>
+            <Nav.Link onClick={() => { setTab(2) }} eventKey="link2"><h5>beverage</h5></Nav.Link>
           </Nav.Item>
 
         </Nav>
@@ -122,24 +133,102 @@ import { useState } from 'react';
         {<div tab={tab}>
           {(() => {
             if (tab === 0) {
-              return <div>
-                <img src={foods[id].imgUrl} alt="imgUrl1" width="100px" />
+              return <div className='tabimgs'>
+
+                <Swiper
+                  slidesPerView={3}
+                  spaceBetween={30}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  {
+                    foods.map((food, i) =>
+                      <SwiperSlide>
+                        <div className='box' onClick={() => { navigate('/detail/' + i) }}>
+                          <div className='img-wrap'>
+                            <div className='thumb'>
+                              <img src={food.imgUrl} alt="food" width="100%" />
+                            </div>
+
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  }
+
+                </Swiper>
+
+
+
+
               </div>
             } else if (tab === 1) {
-              return <div>내용1</div>
+              return <div>
+                <Swiper
+                  slidesPerView={3}
+                  spaceBetween={30}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  {
+                    foods.map((food, i) =>
+                      <SwiperSlide>
+                        <div className='box' onClick={() => { navigate('/detail/' + i) }}>
+                          <div className='img-wrap'>
+                            <div className='thumb'>
+                              <img src={food.imgUrl} alt="food" width="100%" />
+                            </div>
+
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  }
+
+                </Swiper>
+
+              </div>
             } else if (tab === 2) {
-              return <div>내용2</div>
+              return <div>
+                <Swiper
+                  slidesPerView={3}
+                  spaceBetween={30}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  {
+                    beverage.map((bev, i) =>
+                    <SwiperSlide>
+                      <Beverage beverage={bev} i={i} />
+                    </SwiperSlide>
+                      
+                    )
+                  }
+
+                </Swiper>
+
+              </div>
             }
           })()
           }
         </div>}
 
-
+   
         <TabContent tab={tab} />
 
       </div>
 
     </Container>
+
   );
 }
 

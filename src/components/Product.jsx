@@ -12,5 +12,7 @@ const Product = (props) => {
       </Col>
   )
 }
+     
+
 
 export default Product

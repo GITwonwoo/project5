@@ -10,6 +10,7 @@ import Detail from './routes/Detail.jsx';
 function App() {
   const navigate = useNavigate()
   const [foods, setFoods] = useState(data);
+  
 
   return (
     <div className="App">
