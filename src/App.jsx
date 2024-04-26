@@ -1,16 +1,18 @@
 import './App.css';
 import data from './data.js';
+import data2 from './data2';
 import { useState } from 'react';
 import { Container, Navbar, Nav, Row,Col } from 'react-bootstrap';
 import Home from './routes/Home.jsx';
 import {Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Detail from './routes/Detail.jsx';
+import Cart from './routes/Cart.jsx';
 
 
 function App() {
   const navigate = useNavigate()
   const [foods, setFoods] = useState(data);
-  
+  const [beverage, setBeverage] =useState(data2)
 
   return (
     <div className="App">
@@ -25,7 +27,7 @@ function App() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link onClick={()=>{navigate('/')}}>HOME</Nav.Link>
-              <Nav.Link onClick={()=>{navigate('/detail/1')}}>MENU</Nav.Link>
+              <Nav.Link onClick={()=>{navigate('/detail/food/1')}}>MENU</Nav.Link>
               <Nav.Link onClick={()=>{navigate('/cart')}}>CART</Nav.Link>
               <Nav.Link>Pricing</Nav.Link>
             </Nav>
@@ -40,7 +42,9 @@ function App() {
 
       <Routes>
           <Route path="/" element={<Home foods={foods}></Home>} />
-          <Route path="/detail/:id" element={<Detail foods={foods}></Detail>} />
+          <Route path="/detail/food/:id" element={<Detail main={foods} foods={foods} beverage={beverage}></Detail>} />
+          <Route path="/detail/beverage/:id" element={<Detail main={beverage} foods={foods} beverage={beverage}></Detail>} />
+          <Route path='/cart' element={<Cart/>}/>
       </Routes>
 
 

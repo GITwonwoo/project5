@@ -20,9 +20,6 @@
 .Detailsection1{
     padding-top: 200px;
 }
-/* .detailwrap{
-    padding-top: 200px;
-} */
 .signature{
     position: absolute;
 }
@@ -30,7 +27,7 @@
     position: relative;
     align-content: center;
 }
-.imgUrlBox img{ width:25%; margin: 0.8vw;   
+.imgUrlBox img{ width:25%; margin: 1vw;   
 }
 
 
@@ -39,17 +36,16 @@
     position: relative;
 } 
 .textbg{
-    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    position: absolute; top: 30%; left: 50%; transform: translateX(-50%);
     width: 90%; height: 90%;
+    opacity: 0.6;
     
 }
 
-.ProductInfor h6{ width: 50%; margin: 5% auto;
+
+.ProductText{width: 50%; margin: 0% auto;
     font-family: "Libre Baskerville", serif; 
-    line-height: 30px;
-}
-.ProductText{
-    padding: 10vw 0;
+    line-height: 30px;   
 }
 
 
@@ -59,6 +55,30 @@ table,h5{margin: 0 auto; font-family:"Lato", sans-serif, serif; }
 h5{font-weight: bold; font-size: 20px;}
 .nutrient{
     text-align: left;
+}
+
+.buttonbox{
+    display: flex;
+    justify-content: space-evenly
+}
+.mycart:hover{
+    color:  rgb(235, 122, 122); 
+    background-color: white;
+    border: 1px solid  rgb(235, 122, 122);     
+    cursor: pointer;
+    border-radius: 10px; 
+}
+.buy:hover{
+    color:  rgb(235, 122, 122); 
+    background-color: white;
+    border: 1px solid  rgb(235, 122, 122);     
+    cursor: pointer;
+    border-radius: 10px; 
+}
+
+.buy, .mycart{ width: 100px;
+    background-color: rgb(235, 122, 122); color: white;  border-radius: 10px;
+    border-color: pink; 
 }
 
 
@@ -82,3 +102,22 @@ h5{font-weight: bold; font-size: 20px;}
 .swiper .box .img-wrap:hover{
     background-color: transparent;
 }
+
+.Detailsection2 .nav-tabs .nav-link{
+    color: #333;
+}
+.Detailsection2 .nav-tabs .nav-link.active{
+    color:  rgb(235, 122, 122);
+    font-weight: bold;
+}
+.Detailsection2 .swiper-pagination-bullet{
+   background-color: #333;
+}
+.Detailsection2 .swiper-pagination-bullet-active {
+    background-color: rgb(235, 122, 122);
+}
+
+/* ---Detail section3--- */
+.Detailsection3 h5{
+    font-family: "Libre Baskerville", serif;
+   }

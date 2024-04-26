@@ -50,8 +50,8 @@ import { useNavigate } from 'react-router-dom';
 
                             {
                                 foods.map((food, i) =>
-                                    <Col lg={4} sm={6} >
-                                        <div className='box' onClick={()=>{navigate('/detail/1')}}>
+                                    <Col lg={4} sm={6} key={food.id} >
+                                        <div className='box' onClick={()=>{navigate('/detail/food/'+i)}}>
                                             <div className='img-wrap'>
                                                 <div className='thumb'>
                                                     <img src={food.imgUrl} alt="food" width="100%"/>

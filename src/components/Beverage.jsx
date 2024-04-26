@@ -1,7 +1,4 @@
-import React, { useState } from 'react'
-import { Col } from 'react-bootstrap';
-import data2 from '../data2';
-import { SwiperSlide } from 'swiper/react';
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const Beverage = (props) => {
@@ -9,7 +6,7 @@ const Beverage = (props) => {
   const {beverage,i}= props
     
   return (      
-    <div className='box' onClick={() => { navigate('/detail/' + i) }}>
+    <div className='box' onClick={() => { navigate('/detail/beverage/' + i) }}>
         <div className='img-wrap'>
             <div className='thumb'>
                 <img src={beverage.imgUrl} alt="food" width="100%" />
