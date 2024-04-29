@@ -7,6 +7,9 @@
 /* "Lato", sans-serif, serif; */
 
 /* This menu is the meat's signature menu, and the self-developed sauce and aged meat go well together. I recommend it. */
+.detailwrap img:hover{
+    cursor: pointer;
+}
 .steakIMG h2,h4{
     font-family:"Libre Baskerville", serif;  
 }
@@ -32,20 +35,21 @@
 
 
 /* Col right */
-.ProductInfor{
-    position: relative;
-} 
-.textbg{
-    position: absolute; top: 30%; left: 50%; transform: translateX(-50%);
-    width: 90%; height: 90%;
-    opacity: 0.6;
+
+.ProductText{
+    padding-top: 130px;
+    font-family: "Libre Baskerville", serif; 
+    line-height: 30px;   background-image: url(../public/img/textbg.png);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 700px;
+    margin: 0 auto;
     
 }
-
-
-.ProductText{width: 50%; margin: 0% auto;
-    font-family: "Libre Baskerville", serif; 
-    line-height: 30px;   
+.ProductTextbox{
+    width: 200px;
+    margin: 0 auto; 
 }
 
 
@@ -59,7 +63,9 @@ h5{font-weight: bold; font-size: 20px;}
 
 .buttonbox{
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
 }
 .mycart:hover{
     color:  rgb(235, 122, 122); 
@@ -89,10 +95,6 @@ h5{font-weight: bold; font-size: 20px;}
 .Detailsection2{
     padding-top: 100px;
 }
-.tabimgs{
-    display: flex; 
-    flex-wrap: wrap;
-}
 .textbox span{color: gold;}
 
 .swiper{
@@ -121,3 +123,41 @@ h5{font-weight: bold; font-size: 20px;}
 .Detailsection3 h5{
     font-family: "Libre Baskerville", serif;
    }
+
+
+/* cart */
+.plus{ width: 30px;
+    background-color: rgb(235, 122, 122); color: white;  border-radius: 10px;
+    border-color: pink; 
+}
+.minus{ width: 30px; margin: 0 20px;
+    background-color: gray; color: white;  border-radius: 10px;
+    border-color: lightgrey; 
+}
+.cancel{
+    width: 70px; 
+    background-color: gray; color: white;  border-radius: 10px;
+    border-color: lightgrey; 
+}
+.plus:hover{
+    color:  rgb(235, 122, 122); 
+    background-color: white;
+    border: 1px solid  rgb(235, 122, 122);     
+    cursor: pointer;
+    border-radius: 10px; 
+}
+ .minus:hover{
+    color:  gray;
+    background-color: white;
+    border: 1px solid  lightgray;     
+    cursor: pointer;
+    border-radius: 10px; 
+}
+.cancel:hover{
+    color:  gray;
+    background-color: white;
+    border: 1px solid  lightgray;     
+    cursor: pointer;
+    border-radius: 10px; 
+}
+

@@ -1,7 +1,7 @@
 let data = [
 
     {
-      id: 0,
+      id: 6,
       title: "strawberry",
       imgUrl: "/img/drink_strawberry.jpg",
       imgUrl1: "/img/drink_strawberry.jpg",
@@ -16,7 +16,7 @@ let data = [
     },
     
     {
-      id: 1,
+      id: 7,
       title: "kombutea",
       imgUrl: "/img/drink_kombutea.jpg",
       imgUrl1: "/img/drink_kombutea.jpg",
@@ -31,7 +31,7 @@ let data = [
     },
     
     {
-      id: 2,
+      id: 8,
       title: "beer",
       imgUrl: "/img/drink_beer.jpg",
       imgUrl1: "/img/drink_beer.jpg",
@@ -46,7 +46,7 @@ let data = [
     },
 
     {
-      id : 3,
+      id : 9,
       title: "coke",
       imgUrl: "/img/drink_coke.jpg",
       imgUrl1: "/img/drink_coke.jpg",
@@ -61,7 +61,7 @@ let data = [
     },
     
     {
-      id : 4,
+      id : 10,
       title: "water",
       imgUrl: "/img/drink_water.jpg",
       imgUrl1: "/img/drink_water.jpg",

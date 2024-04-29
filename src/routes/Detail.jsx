@@ -16,8 +16,8 @@ import { addItem } from '../store';
 const Detail = (props) => {
 
   let { id } = useParams();
-  let { main, foods,beverage } = props
-  
+  let { main, foods, beverage } = props
+
   let [tab, setTab] = useState(0)
   let navigate = useNavigate();
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ const Detail = (props) => {
       <div className='Detailsection1'>
 
         <Row>
-          <Col md={6} className='steakIMG'>
+          <Col lg={6} className='steakIMG'>
             <h2>--our menu--</h2>
             <h1>{main[id].title}</h1>
 
@@ -56,7 +56,7 @@ const Detail = (props) => {
             </div>
 
             {
-              window.location.href.indexOf('/food')>0  &&
+              window.location.href.indexOf('/food') > 0 &&
               <div className='imgUrlBox'>
                 <img src={main[id].imgUrl} alt="imgUrl1" width="100px" onClick={() => (setClick(0))} />
                 <img src={main[id].imgUrl1} alt="imgUrl2" width="100px" onClick={() => (setClick(1))} />
@@ -64,37 +64,26 @@ const Detail = (props) => {
               </div>
             }
           </Col>
-          
-          <Col md={6}className='ProductInfor'>
+
+          <Col lg={6} className='ProductInfor'>
+
+
 
             <div className='ProductText'>
-              <div className='buttonbox'>
+              <div className='ProductTextbox'>
+        
+                <h4>delicious information</h4>
+                <h6>{main[id].content}</h6>
 
-                 <button className='buy' onClick={()=>{
-                  dispatch(addItem({id:main[id].id, imgUrl:main[id].imgUrl,title:main[id].title,price:main[id].price,amount:1}))
-                  navigate("/cart")
-                 }}>
-                  buy</button>
-                 
-                 <button className='mycart' onClick={()=>{
-                  navigate("/cart")
-                 }}>
-                  my cart</button>
-                 
+                <table>
+                  <tbody>
+                    <tr className='bold'>
+                      <th>prIce</th>
+                      <td><span className='Gold'>{main[id].price}$</span></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            <img className='textbg' src="/img/textbg.png" alt="textbg" width="100%" />
-              <h4>delicious information</h4>
-              <h6>{main[id].content}</h6>
-
-              <table>
-                <tbody>
-                  <tr className='bold'>
-                    <th>price</th>
-                    <td><span className='Gold'>{main[id].price}$</span></td>
-                  </tr>
-                </tbody>
-              </table>
-
               <br />
               <br />
               <h5>nutrient</h5>
@@ -123,9 +112,23 @@ const Detail = (props) => {
                   </tr>
                 </tbody>
               </table>
+              <div className='buttonbox'>
+
+                <button className='buy' onClick={() => {
+                  dispatch(addItem({ id: main[id].id, imgUrl: main[id].imgUrl, title: main[id].title, price: main[id].price, amount: 1 }))
+                  alert("put it in my cart.")
+                }}>
+                  buy</button>
+
+                <button className='mycart' onClick={() => {
+                  navigate("/cart")
+                }}>
+                  my cart</button>
+
+              </div>
             </div>
 
-        
+
           </Col>
         </Row>
       </div>
@@ -154,10 +157,20 @@ const Detail = (props) => {
               return <div className='tabimgs'>
 
                 <Swiper
-                  slidesPerView={3}
+                  slidesPerView={1}
                   spaceBetween={30}
                   pagination={{
                     clickable: true,
+                  }}
+                  breakpoints={{
+                    576: {
+                      slidesPerView: 2,
+                      spaceBetween: 30,
+                    },
+                    992: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
                   }}
                   modules={[Pagination]}
                   className="mySwiper"
@@ -183,52 +196,34 @@ const Detail = (props) => {
 
 
               </div>
-            // } else if (tab === 1) {
-            //   return <div>
-            //     <Swiper
-            //       slidesPerView={3}
-            //       spaceBetween={30}
-            //       pagination={{
-            //         clickable: true,
-            //       }}
-            //       modules={[Pagination]}
-            //       className="mySwiper"
-            //     >
-            //       {
-            //         foods.map((food, i) =>
-            //           <SwiperSlide>
-            //             <div className='box' onClick={() => { navigate('/detail/' + i) }}>
-            //               <div className='img-wrap'>
-            //                 <div className='thumb'>
-            //                   <img src={food.imgUrl} alt="food" width="100%" />
-            //                 </div>
-
-            //               </div>
-            //             </div>
-            //           </SwiperSlide>
-            //         )
-            //       }
-
-            //     </Swiper>
-
-            //   </div>
+              
             } else if (tab === 1) {
               return <div>
                 <Swiper
-                  slidesPerView={3}
+                  slidesPerView={1}
                   spaceBetween={30}
                   pagination={{
                     clickable: true,
+                  }}
+                  breakpoints={{
+                    576: {
+                      slidesPerView: 2,
+                      spaceBetween: 30,
+                    },
+                    992: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
                   }}
                   modules={[Pagination]}
                   className="mySwiper"
                 >
                   {
                     beverage.map((bev, i) =>
-                    <SwiperSlide key={bev.id}>
-                      <Beverage beverage={bev} i={i} />
-                    </SwiperSlide>
-                      
+                      <SwiperSlide key={bev.id}>
+                        <Beverage beverage={bev} i={i} />
+                      </SwiperSlide>
+
                     )
                   }
 
@@ -240,14 +235,14 @@ const Detail = (props) => {
           }
         </div>}
 
-   
+
         <TabContent tab={tab} />
 
       </div>
 
 
       <div className='Detailsection3' >
-        
+
       </div>
 
     </Container>

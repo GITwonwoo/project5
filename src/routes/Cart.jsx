@@ -41,7 +41,7 @@ function Cart() {
 
     return (
 
-        <Container style={{ paddingTop: "200px" }}>
+        <Container style={{ paddingTop: "250px", paddingBottom:"250px" }}>
             {/* <button onClick={()=>{
            dispatch(increase(1))}
         }>나이+</button> //5. dispatch(state변경함수()) 사용
@@ -68,13 +68,13 @@ function Cart() {
                                 <td>{v.title}</td>
                                 <td>{v.amount}</td>
                                 <td>
-                                    <button onClick={() =>
+                                    <button className='plus' onClick={() =>
                                         dispatch(addCount(v.id))
                                     }>+</button>
-                                    <button onClick={() =>
+                                    <button className='minus' onClick={() =>
                                         dispatch(removeCount(v.id))
                                     }>-</button>
-                                    <button onClick={() =>
+                                    <button className='cancel' onClick={() =>
                                         dispatch(removeItem(v.id))
                                     }>cancel</button>
                                 </td>
@@ -89,11 +89,11 @@ function Cart() {
             </Table>
             <h3>total:{total()}$</h3>
 
-            <Button variant="outline-primary" onClick={() => {
+            <Button variant="outline-warning" onClick={() => {
 
                 dispatch(sortName())
 
-            }}>이름순정렬</Button>{' '}
+            }}>Sort by name</Button>{' '}
 
         </Container>
 
