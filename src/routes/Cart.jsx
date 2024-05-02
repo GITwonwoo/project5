@@ -64,7 +64,7 @@ function Cart() {
                         cart.map((v, i) =>
                             <tr key={i}>
                                 <td>{v.id}</td>
-                                <td><img src={v.imgUrl} alt="" width="100px" /></td>
+                                <td><img src={process.env.PUBLIC_URL +v.imgUrl} alt="" width="100px" /></td>
                                 <td>{v.title}</td>
                                 <td>{v.amount}</td>
                                 <td>

@@ -9,7 +9,7 @@ const Beverage = (props) => {
     <div className='box' onClick={() => { navigate('/detail/beverage/' + i) }}>
         <div className='img-wrap'>
             <div className='thumb'>
-                <img src={beverage.imgUrl} alt="food" width="100%" />
+                <img src={process.env.PUBLIC_URL +beverage.imgUrl} alt="food" width="100%" />
             </div>
 
         </div>

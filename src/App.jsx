@@ -20,7 +20,7 @@ function App() {
         <Container>
           <Navbar.Brand onClick={() => { navigate('/') }}>
             <div className='logobox'>
-              <img src="/img/meatlogo.png" alt="0" width='15%' />
+              <img src= {process.env.PUBLIC_URL +"/img/meatlogo.png"} alt="0" width='15%' />
               <span className='black'>Meat</span>
               <span className='pink'>Club</span>
             </div>
@@ -57,22 +57,22 @@ function App() {
         <Container>
           <Row>
             <Col lg={4} className='part'>
-              <h3><img src="/img/meatlogo_small.png" alt="1" />The Meat Club</h3>
+              <h3><img src={process.env.PUBLIC_URL +"/img/meatlogo_small.png"} alt="1" />The Meat Club</h3>
               <p>Which morning fourth great won't is to fly bearing man. Called unto shall seed, deep, herb set seed land divide after over first creeping. First creature set upon stars deep male gathered said she'd an image spirit our</p>
             </Col>
 
             <Col lg={4} className='part'>
               <h3>Contact Us</h3>
               <div className='ContactUs'>
-                <img src="/img/instagram.png" alt="1" />
+                <img src={process.env.PUBLIC_URL +"/img/instagram.png"} alt="1" />
                 <p>themeatclub.instagram</p>
               </div>
               <div className='ContactUs'>
-                <img src="/img/youtube.png" alt="2" />
+                <img src={process.env.PUBLIC_URL +"/img/youtube.png"} alt="2" />
                 <p>https://TheMeatClub_youtube.com</p>
               </div>
               <div className='ContactUs'>
-                <img src="/img/naverblog.png" alt="3" />
+                <img src={process.env.PUBLIC_URL +"/img/naverblog.png"} alt="3" />
                 <p>support@naver.blog.com</p>
               </div>
             </Col>

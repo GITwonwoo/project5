@@ -39,16 +39,16 @@ const Detail = (props) => {
             <div>
               {
                 main[id].logo !== undefined &&
-                <img className='signature' src={main[id].logo} alt="signature" width="25%" />
+                <img className='signature' src={process.env.PUBLIC_URL +main[id].logo} alt="signature" width="25%" />
               }
               {
                 (() => {
                   if (click === 0) {
-                    return <img src={main[id].imgUrl} alt="topblade" width="100%" />
+                    return <img src={process.env.PUBLIC_URL +main[id].imgUrl} alt="topblade" width="100%" />
                   } else if (click === 1) {
-                    return <img src={main[id].imgUrl1} alt="topblade" width="100%" />
+                    return <img src={process.env.PUBLIC_URL +main[id].imgUrl1} alt="topblade" width="100%" />
                   } else if (click === 2) {
-                    return <img src={main[id].imgUrl2} alt="topblade" width="100%" />
+                    return <img src={process.env.PUBLIC_URL +main[id].imgUrl2} alt="topblade" width="100%" />
                   }
                 })()
               }
@@ -58,9 +58,9 @@ const Detail = (props) => {
             {
               window.location.href.indexOf('/food') > 0 &&
               <div className='imgUrlBox'>
-                <img src={main[id].imgUrl} alt="imgUrl1" width="100px" onClick={() => (setClick(0))} />
-                <img src={main[id].imgUrl1} alt="imgUrl2" width="100px" onClick={() => (setClick(1))} />
-                <img src={main[id].imgUrl2} alt="imgUrl3" width="100px" onClick={() => (setClick(2))} />
+                <img src={process.env.PUBLIC_URL +main[id].imgUrl} alt="imgUrl1" width="100px" onClick={() => (setClick(0))} />
+                <img src={process.env.PUBLIC_URL +main[id].imgUrl1} alt="imgUrl2" width="100px" onClick={() => (setClick(1))} />
+                <img src={process.env.PUBLIC_URL +main[id].imgUrl2} alt="imgUrl3" width="100px" onClick={() => (setClick(2))} />
               </div>
             }
           </Col>
@@ -181,7 +181,7 @@ const Detail = (props) => {
                         <div className='box' onClick={() => { navigate('/detail/food/' + i) }}>
                           <div className='img-wrap'>
                             <div className='thumb'>
-                              <img src={food.imgUrl} alt="food" width="100%" />
+                              <img src={process.env.PUBLIC_URL +food.imgUrl} alt="food" width="100%" />
                             </div>
 
                           </div>

@@ -28,7 +28,7 @@ let cart = createSlice({
          let num =state.findIndex(a =>a.id===action.payload)
          state[num].amount--
          if(state[num].amount<1){
-            alert('최소 주문 수량은 1개 입니다.');
+            alert('Minimum order quantity is 1 unit! ^.^');
             state[num].amount=1;
          }
         },

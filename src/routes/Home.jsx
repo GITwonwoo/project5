@@ -25,13 +25,13 @@ import { useNavigate } from 'react-router-dom';
                 </Container>
                 <Carousel >
                     <Carousel.Item>
-                        <img src="/img/bg1.jpg" alt="" width='100%' />
+                        <img src={process.env.PUBLIC_URL +"/img/bg1.jpg"} alt="" width='100%' />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img src="/img/bg2.jpg" alt="" width='100%' />
+                        <img src={process.env.PUBLIC_URL +"/img/bg2.jpg"} alt="" width='100%' />
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img src="/img/bg3.jpg" alt="" width='100%' />
+                        <img src={process.env.PUBLIC_URL +"/img/bg3.jpg"} alt="" width='100%' />
                     </Carousel.Item>
                 </Carousel>
             </div>
@@ -54,7 +54,7 @@ import { useNavigate } from 'react-router-dom';
                                         <div className='box' onClick={()=>{navigate('/detail/food/'+i)}}>
                                             <div className='img-wrap'>
                                                 <div className='thumb'>
-                                                    <img src={food.imgUrl} alt="food" width="100%"/>
+                                                    <img src= {process.env.PUBLIC_URL +food.imgUrl} alt="food" width="100%"/>
                                                 </div>
                                                 <div className='textbox'>
                                                     <h4>{food.title} <span>{food.price} $</span></h4>
@@ -108,26 +108,26 @@ import { useNavigate } from 'react-router-dom';
                                 className="mySwiper"
                             >
                                 <SwiperSlide>
-                                    <img src="img/food1.webp" alt="" />
+                                    <img src={process.env.PUBLIC_URL +"/img/food1.webp"} alt="food1" />
                                     <div className='swipertext'>
-                                        <i style={{ fontSize: '20px', color: 'gray' }} class="fa-regular fa-user"></i >admin
+                                        <i style={{ fontSize: '20px', color: 'gray' }} className="fa-regular fa-user"></i >admin
 
-                                        <i class="fa-solid fa-calendar-days"></i>2024/05/15
-                                        <p>
+                                        <i className="fa-solid fa-calendar-days"></i>2024/05/15
+                                        <div>
                                             <h5>steak burger</h5>
                                             <h6>
                                                 We made handmade steak burgers using our own processed meat patties. Try a meat patty that is on a different level from existing franchise burgers.
                                             </h6>
-                                        </p>
+                                        </div>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <img src="img/food2.jpg" alt="" />
+                                    <img src={process.env.PUBLIC_URL +"/img/food2.jpg"} alt="food2"/>
                                     <div className='swipertext'>
-                                        <i style={{ fontSize: '20px', color: 'gray' }} class="fa-regular fa-user"></i >admin
+                                        <i style={{ fontSize: '20px', color: 'gray' }} className="fa-regular fa-user"></i >admin
 
-                                        <i class="fa-solid fa-calendar-days"></i>2024/
+                                        <i className="fa-solid fa-calendar-days"></i>2024/
                                         05/15
                                         <div>
                                             <h5>sirloin sushi</h5>
@@ -137,29 +137,29 @@ import { useNavigate } from 'react-router-dom';
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <img src="img/food3.webp" alt="" />
+                                    <img src={process.env.PUBLIC_URL +"/img/food3.webp"} alt="food3"/>
                                     <div className='swipertext'>
-                                        <i style={{ fontSize: '20px', color: 'gray' }} class="fa-regular fa-user"></i >admin
-                                        <i class="fa-solid fa-calendar-days"></i>2024/
+                                        <i style={{ fontSize: '20px', color: 'gray' }} className="fa-regular fa-user"></i >admin
+                                        <i className="fa-solid fa-calendar-days"></i>2024/
                                         05/15
-                                        <p>
+                                        <div>
                                             <h5>ddeokgalbi</h5>
                                             <h6>
                                                 Tteokgalbi is a traditional Korean food. It is made by mincing meat in the Korean way and is similar to a patty, but has a Korean taste.</h6>
-                                        </p>
+                                        </div>
                                     </div>
                                 </SwiperSlide>
 
                                 <SwiperSlide>
-                                    <img src="img/food4.webp" alt="" />
+                                    <img src={process.env.PUBLIC_URL +"/img/food4.webp"} alt="food4" />
                                     <div className='swipertext'>
-                                        <i style={{ fontSize: '20px', color: 'gray' }} class="fa-regular fa-user"></i >admin
-                                        <i class="fa-solid fa-calendar-days"></i>2024/
+                                        <i style={{ fontSize: '20px', color: 'gray' }} className="fa-regular fa-user"></i >admin
+                                        <i className="fa-solid fa-calendar-days"></i>2024/
                                         05/15
-                                        <p>
+                                        <div>
                                             <h5>steak hotdog</h5>
                                             <h6>We made it easy for anyone to take out by putting steak on a hot dog-style bun. Of course, you can also eat in the store.</h6>
-                                        </p>
+                                        </div>
                                     </div>
                                 </SwiperSlide>
 
